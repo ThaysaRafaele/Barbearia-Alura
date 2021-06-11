@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	  <meta charset="UTF-8">
+	  <title>Produtos - Barbearia Alura</title>
+	  <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+	  <header>
+      <div class="caixa">
+        <h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+        <nav>
+          <ul>
+            <li><a class="opcao" href="index.html">Home</a></li>
+            <li><a class="opcao" href="produtos.html">Produtos</a></li>
+            <li><a class="opcao" href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <form>
+        <label for="nomeSobrenome">Nome e Sobrenome</label>
+        <input type="text" id="nomeSobrenome" class="input-padrao" required>
+        <!-- Colocando o “required” na tag do input, torna o preenchimento do campo “obrigatório” para envio do formulário -->
+
+        <label for="email">Email</label>
+        <input type="email" id="email" class="input-padrao" required placeholder="SeuEmail@dominio.com">
+        <!-- placeholder="alguma coisa" define a marca dágua apresentada no campo -->
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+        <!-- cols = nº colunas e rows = nº linhas do text area -->
+
+        <fieldset>
+          <legend>Como prefere nosso contato?</legend>
+
+          <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+          
+          <!-- name = "contato" torna os radios do mesmo grupo-->               
+
+          <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label> 
+           
+          <!--com name definida, ao marcar 1 desmarca o outro -->
+
+          <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>         
+          <!--for definido na label = ao nome id do input. Dessa forma, ao clicar na label seleciona o input -->
+        </fieldset>
+
+        <label class="checkbox"><input type="checkbox" checked>
+        Gostaria de receber nossas novidades por email?</label>
+        <!-- checked serve para sugerir uma opção e deixar sempre uma marcada, sendo possível que o usuário altere de acordo -->
+
+        <fieldset>
+          <legend>Qual horário prefere ser atendido?</legend>
+
+          <select>                  <!--Criando dropdown-->
+            <option>Manhã</option>  <!--opções do dropdown-->
+            <option>Tarde</option>
+            <option>Noite</option>
+          </select>
+
+        </fieldset>
+
+        <input type="submit" value="Enviar" class="enviar">
+
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Dia</th>
+            <th>Horário</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Segunda</td>
+            <td>8h ~ 20h</td>
+          </tr>
+          <tr>
+            <td>Quarta</td>
+            <td>8h ~ 20h</td>
+          </tr>
+          <tr>
+            <td>Sexta</td>                                        
+            <td>8h ~ 20h</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </main>
+
+    <footer> <!-- rodapé da página -->
+      <img src="logo-branco.png" alt="Logo da Barbearia Alura">
+      <p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
+    </footer>
+  </body>
+</html>
